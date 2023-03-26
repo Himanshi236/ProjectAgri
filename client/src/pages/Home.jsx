@@ -5,6 +5,7 @@ import Slider from '../components/Slider'
 import Footer from "../components/Footer";
 
 function home() {
+
   return (
     <div>
         <Navbar/>
@@ -13,6 +14,7 @@ function home() {
         <Footer/>
     </div>
   )
+  
 }
 
 export default home
