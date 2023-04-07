@@ -16,10 +16,10 @@ function App() {
   },[]);
   return (
     <>
-      {/* // <Home />
-    // <Login /> */}
-      <Register />
-    {/* // <Blog/> */}
+      <Home />
+    {/* <Login /> */}
+      {/* <Register /> */}
+     {/* <Blog/> */}
 
     </>
     
