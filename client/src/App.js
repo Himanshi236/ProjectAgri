@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Blog from './pages/Blog'
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -16,10 +17,11 @@ function App() {
   },[]);
   return (
     <>
-      <Home />
+      {/* <Home /> */}
     {/* <Login /> */}
       {/* <Register /> */}
      {/* <Blog/> */}
+     <Contact/>
 
     </>
     
