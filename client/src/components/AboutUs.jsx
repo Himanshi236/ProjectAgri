@@ -42,8 +42,10 @@ const Image = styled.img`
   height: auto;
   margin-bottom: 1.5rem;
   transition: 1.5s ease-in-out;
+  border-radius: 50px;
   ${AboutUsWrapper}:hover & {
     transform: scale(1.06);
+
   }
   /* &:hover{
     transform:scale(1.1);

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from 'react';
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { sliderItems } from '../data';
+import image2 from "./image2.jpg"
 
 const Container = styled.div`
   width: 100%;
@@ -40,6 +41,9 @@ const Wrapper = styled.div`
   transition: all 1.5s ease;
   //-100 vw means the shifting towards the -x axis
   transform: translate(${(props) => props.slideIndex * -100}vw);
+
+  background-image: url(${image2});
+  
 `;
 
 const Slide = styled.div`
@@ -48,6 +52,9 @@ const Slide = styled.div`
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
+
+  
+  
 `;
 
 const ImgContainer = styled.div`
@@ -63,24 +70,32 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex: 1;
+  
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  
   /* font-weight:800px; */
 `;
 
 const Desc = styled.p`
-  margin: 50px 0px;
+  margin: 50px 10px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
 `;
 
 const Button = styled.button`
-  padding: 10px;
+  padding: 15px;
   font-size: 20px;
+  border-radius:5px;
+  margin-left:10px;
+  
   background-color: transparent;
+  &:hover {
+    background-color: #d0ba2c;
+  }
 `;
 
 const Slider = () => {
@@ -107,11 +122,11 @@ const Slider = () => {
               <Image src={item.img}></Image>
             </ImgContainer>
 
-            {/* <InfoContainer>
+            <InfoContainer>
               <Title> {item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>SHOP NOW</Button>
-            </InfoContainer> */}
+              {/* <Desc>{item.desc}</Desc> */}
+              <Button>DISCOVER MORE</Button>
+            </InfoContainer>
           </Slide>
         ))}
       </Wrapper>
