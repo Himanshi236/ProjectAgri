@@ -3,20 +3,21 @@ import styled from 'styled-components'
 
 import { Copyright, Facebook, Instagram, Twitter } from '@material-ui/icons';
 
-const Container=styled.div`
+const Container = styled.div`
     height: 200px;
     background-color: #010101;
     display: flex;
     justify-content: center;
 
-`
-const Wrapper=styled.div`
-  display:flex;
+`;
+const Wrapper = styled.div`
+  display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  color:white;
-`
+  /* color: white; */
+  color: #d0ba2c;
+`;
 const Icons=styled.div`
   display:flex;
   justify-content:space-evenly;

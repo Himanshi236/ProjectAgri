@@ -75,6 +75,7 @@ function Register() {
   const handleSubmit=(e)=>{
       alert("Submitted")
   }
+  
   const PostData=async(e)=>{
     const navigate = useNavigate();
       e.preventDefault();

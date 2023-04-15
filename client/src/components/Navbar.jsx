@@ -3,30 +3,31 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   height: 60px;
-  background-color: #365b33;
+  background-color: black;
   display: flex;
   align-items: center;
+  font-family: Roboto, sans-serif;
   cursor: pointer;
 `;
 const Left = styled.div`
   flex: 1;
-  color: white;
+  color: #d0ba2c;
   cursor: default;
 `;
 
 const Center = styled.div`
   flex: 1;
-  color: white;
-  
-  font-size:40px;
+  color: #d0ba2c;
+  font-weight: 500;
+  font-size: 40px;
   cursor: default;
 `;
 
 const Right = styled.div`
   flex: 1;
-  color: white;
-  
-  display:flex;
+  color: #d0ba2c;
+
+  display: flex;
 `;
 
 const Item=styled.div`

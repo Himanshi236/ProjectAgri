@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 const Container = styled.div`
   width: 100vw;
@@ -21,7 +21,11 @@ const Wrapper = styled.div`
   
   background-color: white;
 `;
-
+const Heading=styled.h1`
+  display: flex;
+  justify-content: center;
+  
+`
 const Image = styled.img`
   flex: 1;
   height:68%;
@@ -63,6 +67,27 @@ const TextArea = styled.textarea`
 `;
 
 function Contact() {
+ const [contactData,setContactData]=useState({
+    name:"",
+    email:"",
+    message:"",
+ })
+
+ const handleInput=(e)=>{
+   const name=e.target.name;
+   const value=e.target.value;
+
+   setContactData({...contactData,[name]:value})
+  }
+
+  const handleSubmit=(e)=>{
+    alert("Submitted")
+  }
+
+  
+
+
+
   return (
     <Container>
       <Wrapper>
@@ -72,26 +97,31 @@ function Contact() {
         ></Image>
 
         <Text>
-          <Form>
+          <Heading>Contact Us</Heading>
+          <Form onSubmit={PostData} method="POST">
             <FormData
               type="text"
               placeholder="Enter your name"
               name="name"
+              value={contactData.name}
+              onChange={(e) => setName(e.target.value)}
             ></FormData>
 
             <FormData
               type="text"
               placeholder="Enter your email"
               name="email"
+              value={contactData.email}
             ></FormData>
 
             <TextArea
               type="text"
               placeholder="Enter your message"
-              name="email"
+              name="message"
+              value={contactData.message}
             ></TextArea>
 
-            <Button>Submit</Button>
+            <Button onClick={PostData}>Submit</Button>
           </Form>
         </Text>
       </Wrapper>

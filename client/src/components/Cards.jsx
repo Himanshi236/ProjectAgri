@@ -1,84 +1,94 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container=styled.div`
-    height:600px;
-    background-color: gray;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    
-
-`
-
-
-const Card1 = styled.div`
-  height: 400px;
-  width: 400px;
-  background-color: white;
-  border-radius: 20px;
-  &:hover {
-    color: white;
-    background-color: #089608;
-  }
-  transition:all ease 1s;
-`;
-
-const Card2 = styled.div`
-  height: 400px;
-  width: 400px;
-  background-color: white;
-  border-radius: 20px;
-  &:hover {
-    color: white;
-    background-color: #089608;
-    opacity: 0.4;
-  }
-  transition: all ease 1s;
-`;
-
-const Card3 = styled.div`
-  height: 400px;
-  width: 400px;
-  background-color: white;
-  border-radius: 20px;
-  &:hover {
-    color: white;
-    background-color: #089608;
-  }
-  transition: all ease 1s;
-`;
-
-const Content = styled.div`
+const Container = styled.div`
+  height: 600px;
+  /* background-color: #d0ba2c; */
   display: flex;
-  flex-direction: column;
-  background-color: white;
-  margin: 30px;
-  &:hover {
-    color: white;
-    background-color: #089608;
-  }
-  transition: all ease 1s;
+  align-items: center;
+  justify-content: space-around;
 `;
 
-const Image = styled.div`
-  height: 10%;
-  width: 50%;
+const CardWrapper = styled.div`
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 16px;
+  padding: 24px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
   &:hover {
-    color: white;
-    background-color: #089608;
+    background-color: #d0ba2c;
+    transform: scale(1.10);
   }
-  transition: all ease 1s;
+`;
+const CardImg = styled.img`
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+`;
+const CardContent = styled.div`
+  /* Add your card description styles here */
+  margin-top: 8px;
+  font-size: 16px;
+  color: #777;
+  ${CardWrapper}:hover & {
+    color: #fff;
+  }
 `;
 
-const Text=styled.div`
-margin-top:20px;
-  
-`
+
+
+
+
+
+
+
+
+
 function Cards() {
+  
   return (
     <Container>
-      <Card1>
+      <CardWrapper>
+        <CardImg src="https://img.freepik.com/free-photo/countryside-field-sunny-day-countryside_181624-24010.jpg?size=626&ext=jpg&ga=GA1.2.50035596.1672850077&semt=sph" />
+        <CardContent>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id
+          perferendis velit illum, nesciunt eligendi obcaecati doloremque
+          molestias dolore minus,nesciunt eligendi obcaecati doloremque
+          molestias dolore minus.
+        </CardContent>
+      </CardWrapper>
+
+      <CardWrapper>
+        <CardImg
+          src="https://media.istockphoto.com/id/1308965128/photo/a-beautiful-green-wheat-field-grows-during-a-sunny-day.jpg?b=1&s=170667a&w=0&k=20&c=suE6fKlc7C8f8_f307sjUtAiSbPWgHWz-RUm5MmuTaI="
+          alt="card1"
+        />
+        <CardContent>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id
+          perferendis velit illum, nesciunt eligendi obcaecati doloremque
+          molestias dolore minus,nesciunt eligendi obcaecati doloremque
+          molestias dolore minus.
+        </CardContent>
+      </CardWrapper>
+
+      <CardWrapper>
+        <CardImg
+          src="https://www.ars.usda.gov/ARSUserFiles/oc/graphics/photos/k4418-6i.jpg"
+          alt="card1"
+        />
+        <CardContent>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id
+          perferendis velit illum, nesciunt eligendi obcaecati doloremque
+          molestias dolore minus,nesciunt eligendi obcaecati doloremque
+          molestias dolore minus.
+        </CardContent>
+      </CardWrapper>
+
+      {/* <Card1>
         <Content>
           <Image>
             <img
@@ -120,7 +130,7 @@ function Cards() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure asperiores autem quos consectetur voluptas exercitationem reprehenderit? Maiores aperiam necessitatibus facilis.
           </Text>
         </Content>
-      </Card3>
+      </Card3> */}
     </Container>
   );
 }

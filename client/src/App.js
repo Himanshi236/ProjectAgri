@@ -17,11 +17,11 @@ function App() {
   },[]);
   return (
     <>
-      {/* <Home /> */}
+      <Home />
     {/* <Login /> */}
       {/* <Register /> */}
      {/* <Blog/> */}
-     <Contact/>
+     {/* <Contact/> */}
 
     </>
     
